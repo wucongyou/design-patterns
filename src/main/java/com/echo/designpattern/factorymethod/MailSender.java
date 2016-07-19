@@ -1,5 +1,7 @@
 package com.echo.designpattern.factorymethod;
-
+/**
+ * 相当于具体产品
+ */
 public class MailSender implements Sender {
 
 	@Override
