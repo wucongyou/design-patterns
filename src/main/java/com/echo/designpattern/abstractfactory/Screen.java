@@ -1,5 +1,5 @@
 package com.echo.designpattern.abstractfactory;
 
-public interface Sender {
-	 public void Send();  
+public interface Screen {
+	public void display();
 }
