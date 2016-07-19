@@ -6,7 +6,6 @@ public class Client {
 		AbstractFactory factory = new MobilephoneBrandAFactory();
 		factory.produceCPU().calculate();
 		factory.produceScreen().display();
-		;
 	}
 
 }
