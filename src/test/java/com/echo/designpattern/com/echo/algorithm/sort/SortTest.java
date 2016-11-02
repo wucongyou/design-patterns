@@ -1,5 +1,6 @@
 package com.echo.designpattern.com.echo.algorithm.sort;
 
+import com.echo.algorithm.sort.BinSelectSort;
 import com.echo.algorithm.sort.ISort;
 import com.echo.algorithm.sort.InsertionSort;
 import com.echo.algorithm.sort.QuickSort;
@@ -27,6 +28,7 @@ public class SortTest {
     sort = new InsertionSort();
     sort = new QuickSort();
     sort = new ShellSort();
+    sort = new BinSelectSort();
     records = mockRecords();
   }
 
@@ -42,6 +44,9 @@ public class SortTest {
     for (int i = 0; i < 10; i++) {
       records[i] = new Random().nextInt(100);
     }
+    //int[] recordstmp = {54, 18, 43, 34, 44, 11, 75, 88, 38, 31};
+    //[25, 70, 59, 89, 45, 41, 20, 28, 19, 43]
+    //records = recordstmp;
     return records;
 
   }
