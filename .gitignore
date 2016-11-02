@@ -10,5 +10,7 @@ target
 *.ear
 .idea
 *.iml
+*.ipr
+*.iws
 *.swp
 

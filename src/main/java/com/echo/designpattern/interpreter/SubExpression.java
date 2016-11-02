@@ -1,10 +1,12 @@
 package com.echo.designpattern.interpreter;
 
-public class MinusExpression implements Expression {
+/**
+ * Created by echo on 16-9-20.
+ */
+public class SubExpression implements Expression {
 
   @Override
   public int interprete(Context context) {
     return context.getOpe1() - context.getOpe2();
   }
-
 }
