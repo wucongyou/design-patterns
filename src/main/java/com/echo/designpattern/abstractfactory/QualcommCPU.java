@@ -1,10 +1,10 @@
 package com.echo.designpattern.abstractfactory;
 
-public class QualcommCPU implements CPU {
+public class QualcommCPU implements ICPU {
 
-	@Override
-	public void calculate() {
-		System.out.println("Qualcomm CPU is calculating.");
-	}
+  @Override
+  public void doCalculate() {
+    System.out.println("Qualcomm CPU is calculating.");
+  }
 
 }

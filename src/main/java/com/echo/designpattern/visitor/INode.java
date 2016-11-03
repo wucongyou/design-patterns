@@ -3,6 +3,8 @@ package com.echo.designpattern.visitor;
 /**
  * Node interface
  */
-public interface Node {
-	public void accept(Visitor visitor);
+public interface INode {
+
+  void doAccept(IVisitor visitor);
+
 }

@@ -1,8 +1,8 @@
 package com.echo.designpattern.abstractfactory;
 
-public class SamsungScreen implements Screen {
+public class SamsungScreen implements IScreen {
 	@Override
-	public void display() {
+	public void doDisplay() {
 		System.out.println("JDI screen is displaying.");
 	}
 }

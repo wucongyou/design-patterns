@@ -1,5 +1,7 @@
 package com.echo.designpattern.abstractfactory;
 
-public interface CPU {
-	public void calculate();
+public interface ICPU {
+
+  void doCalculate();
+
 }

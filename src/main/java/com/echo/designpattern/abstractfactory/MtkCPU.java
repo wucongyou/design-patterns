@@ -1,10 +1,10 @@
 package com.echo.designpattern.abstractfactory;
 
-public class MtkCPU implements CPU {
+public class MtkCPU implements ICPU {
 
-	@Override
-	public void calculate() {
-System.out.println("Mtk CPU is calculating.");		
-	}
+  @Override
+  public void doCalculate() {
+    System.out.println("MTK CPU is calculating.");
+  }
 
 }

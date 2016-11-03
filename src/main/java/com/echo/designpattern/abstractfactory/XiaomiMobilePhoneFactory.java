@@ -1,14 +1,14 @@
 package com.echo.designpattern.abstractfactory;
 
-public class MobilephoneBrandBFactory implements AbstractFactory {
+public class XiaomiMobilePhoneFactory implements IFactory {
 
 	@Override
-	public CPU produceCPU() {
+	public ICPU assembleCPU() {
 		return new MtkCPU();
 	}
 
 	@Override
-	public Screen produceScreen() {
+	public IScreen assembleScreen() {
 		return new SamsungScreen();
 	}
 

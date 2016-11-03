@@ -2,9 +2,10 @@ package com.echo.designpattern.adapter;
 
 public class Client {
 
-	public static void main(String[] args) {
-		Targetable target = new Adapter();
-		target.method2Adapted();
-	}
+  public static void main(String[] args) {
+    IAdapter adapter = new Adapter(new Adaptee());
+    adapter.method1();
+    adapter.method2Adapted();
+  }
 
 }

@@ -1,10 +1,10 @@
 package com.echo.designpattern.abstractfactory;
 
-public class JDIScreen implements Screen {
+public class JDIScreen implements IScreen {
 
-	@Override
-	public void display() {
-		System.out.println("JDI screen is displaying.");
-	}
+  @Override
+  public void doDisplay() {
+    System.out.println("JDI screen is displaying.");
+  }
 
 }
