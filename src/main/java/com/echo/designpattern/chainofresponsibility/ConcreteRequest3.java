@@ -1,7 +1,7 @@
 package com.echo.designpattern.chainofresponsibility;
 
 public class ConcreteRequest3 extends Request {
-	private int level = RequestLevel.level3;
+	private int level = RequestLevel.LEVEL_3;
 
 	public ConcreteRequest3(String content) {
 		super(content);

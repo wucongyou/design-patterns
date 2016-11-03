@@ -1,17 +1,42 @@
 package com.echo.designpattern.builder;
 
-public interface Builder {
-	public void buildMainBoard();
+public class Builder implements IBuilder {
 
-	public void buildCpu();
+  Computer computer = new Computer();
 
-	public void buildGpu();
+  @Override
+  public void buildMainBoard() {
+    computer.setMainBoard("华擎主板");
+  }
 
-	public void buildMemory();
+  @Override
+  public void buildCpu() {
+    computer.setCpu("i7-4700mq");
+  }
 
-	public void buildDisk();
+  @Override
+  public void buildGpu() {
+    computer.setGpu("Nvidia GTX990");
+  }
 
-	public void buildPower();
+  @Override
+  public void buildMemory() {
+    computer.setMemory("Sandisk 8G");
+  }
 
-	public Computer retrieveResult();
+  @Override
+  public void buildDisk() {
+    computer.setDisk("Pulxter SSD 256G");
+  }
+
+  @Override
+  public void buildPower() {
+    computer.setPower("Power First");
+  }
+
+  @Override
+  public Computer retrieveResult() {
+    return computer;
+  }
+
 }

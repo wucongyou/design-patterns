@@ -1,10 +1,10 @@
 package com.echo.designpattern.decorator;
 
-public class Decoratee implements Sourceable{
+public class Decoratee implements IDecoratee {
 
-	@Override
-	public void method() {
-System.out.println("This is decoratee's method running");		
-	}
+  @Override
+  public void doSomething() {
+    System.out.println("This is decoratee's doSomething running");
+  }
 
 }

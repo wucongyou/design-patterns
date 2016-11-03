@@ -1,20 +1,22 @@
 package com.echo.designpattern.chainofresponsibility;
 
 public class ConcreteHandler2 extends Handler {
-	private String name;
-	private int level = RequestLevel.level2;
 
-	public ConcreteHandler2(String name) {
-		this.name = name;
-	}
+  private String name;
+  private int level = RequestLevel.LEVEL_2;
 
-	@Override
-	public int getHandlerLevel() {
-		return level;
-	}
+  public ConcreteHandler2(String name) {
+    this.name = name;
+  }
 
-	@Override
-	public String getHandlerDesc() {
-		return name;
-	}
+  @Override
+  public int getHandlerLevel() {
+    return level;
+  }
+
+  @Override
+  public String getHandlerDesc() {
+    return name;
+  }
+
 }

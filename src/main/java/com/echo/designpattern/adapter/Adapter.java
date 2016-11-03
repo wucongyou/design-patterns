@@ -9,7 +9,7 @@ public class Adapter implements Targetable {
 
 	@Override
 	public void method1() {
-		System.out.println("This is the origin Adapter method");
+		System.out.println("This is the origin Adapter doSomething");
 	}
 
 	@Override

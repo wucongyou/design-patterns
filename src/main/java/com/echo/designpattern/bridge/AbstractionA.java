@@ -1,14 +1,14 @@
 package com.echo.designpattern.bridge;
 
-public class RefinedAbstratcion extends Abstraction {
+public class AbstractionA extends Abstraction {
 
-  public RefinedAbstratcion(Implementor implementor) {
+  public AbstractionA(Implementor implementor) {
     super(implementor);
   }
 
   @Override
-  public RefinedImplementor getImplementor() {
-    return (RefinedImplementor) super.getImplementor();
+  public ImplementorA getImplementor() {
+    return (ImplementorA) super.getImplementor();
   }
 
   @Override

@@ -4,7 +4,7 @@ public class Client {
 
 	public static void main(String[] args) {
 		Receiver receiver = new Receiver();
-		Command command = new ConcreteCommand(receiver);
+		ICommand command = new Command(receiver);
 		Invoker invoker = new Invoker(command);
 		invoker.runCommand();
 	}

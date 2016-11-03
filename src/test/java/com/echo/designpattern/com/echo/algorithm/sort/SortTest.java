@@ -1,6 +1,7 @@
 package com.echo.designpattern.com.echo.algorithm.sort;
 
 import com.echo.algorithm.sort.BinSelectSort;
+import com.echo.algorithm.sort.BubbleSort;
 import com.echo.algorithm.sort.ISort;
 import com.echo.algorithm.sort.InsertionSort;
 import com.echo.algorithm.sort.QuickSort;
@@ -29,6 +30,7 @@ public class SortTest {
     sort = new QuickSort();
     sort = new ShellSort();
     sort = new BinSelectSort();
+    sort = new BubbleSort();
     records = mockRecords();
   }
 

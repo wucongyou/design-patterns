@@ -4,7 +4,7 @@ public class Proxyee implements Sourceable{
 
 	@Override
 	public void method() {
-System.out.println("This is the origin method of proxyee");		
+System.out.println("This is the origin doSomething of proxyee");
 	}
 
 }
