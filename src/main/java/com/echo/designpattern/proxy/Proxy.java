@@ -9,7 +9,7 @@ public class Proxy implements IProxy {
   @Override
   public void doSomething() {
     ++invokeCount;
-    System.out.println("This is the action added by Proxy." + "");
+    System.out.println("This is the doAction added by Proxy." + "");
     proxyee.doSomething();
     System.out.println("Totally invoke " + invokeCount + " times.");
   }

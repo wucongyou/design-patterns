@@ -1,12 +1,24 @@
 package com.echo.designpattern.mediator;
 
-public interface Colleague {
+public class Colleague extends AbstractColleague {
 
-	public void act(Action action);
+  private String name;
 
-	public void interactAction(Action action);
+  public Colleague(String name) {
+    this.name = name;
+  }
 
-	public void setMediator(Mediator mediator);
+  @Override
+  public String toString() {
+    return name;
+  }
 
-	public Mediator getMediator();
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
 }

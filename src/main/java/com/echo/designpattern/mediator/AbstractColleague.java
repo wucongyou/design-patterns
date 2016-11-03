@@ -1,31 +1,31 @@
 package com.echo.designpattern.mediator;
 
-public abstract class AbstractColleague implements Colleague {
+public abstract class AbstractColleague implements IColleague {
 
-	private Mediator mediator;
+  private IMediator mediator;
 
-	@Override
-	public void act(Action action) {
-		System.out.println(this + " send: " + action.getTitle());
-		mediator.action(this, action);
-	}
+  @Override
+  public void act(Action action) {
+    System.out.println(this + " send: " + action.getTitle());
+    mediator.doAction(this, action);
+  }
 
-	@Override
-	public void interactAction(Action action) {
-		System.out.println(this + " response: " + action.getDesc());
-	}
+  @Override
+  public void interactAction(Action action) {
+    System.out.println(this + " response: " + action.getDesc());
+  }
 
-	@Override
-	public Mediator getMediator() {
-		return mediator;
-	}
+  @Override
+  public IMediator getMediator() {
+    return mediator;
+  }
 
-	@Override
-	public void setMediator(Mediator mediator) {
-		this.mediator = mediator;
-	}
+  @Override
+  public void setMediator(IMediator mediator) {
+    this.mediator = mediator;
+  }
 
-	@Override
-	public abstract String toString();
+  @Override
+  public abstract String toString();
 
 }

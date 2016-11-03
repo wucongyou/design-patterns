@@ -3,18 +3,18 @@ package com.echo.designpattern.mediator;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class AbstractMediator implements Mediator {
+public abstract class AbstractMediator implements IMediator {
 
-	protected List<Colleague> colleagues = new ArrayList<Colleague>();
+  protected List<IColleague> colleagues = new ArrayList<IColleague>();
 
-	@Override
-	public void add(Colleague colleague) {
-		System.out.println(colleague + " atteched to mediator: " + this + ".");
-		colleagues.add(colleague);
-		colleague.setMediator(this);
-	}
+  @Override
+  public void attach(IColleague colleague) {
+    System.out.println(colleague + " attached to mediator: " + this + ".");
+    colleagues.add(colleague);
+    colleague.setMediator(this);
+  }
 
-	@Override
-	public abstract void action(Colleague colleague, Action action);
+  @Override
+  public abstract void doAction(IColleague colleague, Action action);
 
 }

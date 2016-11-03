@@ -9,7 +9,7 @@ public class Command implements ICommand {
 
   @Override
   public void execute() {
-    System.out.println("Command calls Receiver's action.");
+    System.out.println("Command calls Receiver's doAction.");
     receiver.action();
   }
 
