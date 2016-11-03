@@ -1,9 +1,9 @@
 package com.echo.designpattern.interpreter;
 
-public class PlusExpression implements Expression {
+public class Addition implements IExpression {
 
   @Override
-  public int interprete(Context context) {
+  public int interpret(Context context) {
     return context.getOpe1() + context.getOpe2();
   }
 

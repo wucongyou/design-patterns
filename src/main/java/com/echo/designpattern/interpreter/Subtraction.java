@@ -1,9 +1,9 @@
 package com.echo.designpattern.interpreter;
 
-public class MinusExpression implements Expression {
+public class Subtraction implements IExpression {
 
   @Override
-  public int interprete(Context context) {
+  public int interpret(Context context) {
     return context.getOpe1() - context.getOpe2();
   }
 
