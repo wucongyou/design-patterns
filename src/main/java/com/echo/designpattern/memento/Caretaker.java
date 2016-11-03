@@ -1,21 +1,15 @@
 package com.echo.designpattern.memento;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 /**
  * Caretaker in this pattern,holds a memento created by a originator.
  */
+@Data
+@AllArgsConstructor
 public class Caretaker {
-	private Memento memento;
 
-	public Caretaker(Memento memento) {
-		this.memento = memento;
-	}
-
-	public Memento getMemento() {
-		return memento;
-	}
-
-	public void setMemento(Memento memento) {
-		this.memento = memento;
-	}
+  private Memento memento;
 
 }
