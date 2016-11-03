@@ -1,9 +1,12 @@
 package com.echo.designpattern.templatemethod;
 
 public class Client {
-public static void main(String[] args) {
-	//Template template=new ConcreteTemplate();
-	Template template=new ConcreteTemplateB();
-	template.templateMethod();
-}
+
+  public static void main(String[] args) {
+    AbstractTemplate template = new TemplateA();
+    template.templateMethod();
+    template = new TemplateB();
+    template.templateMethod();
+  }
+
 }
