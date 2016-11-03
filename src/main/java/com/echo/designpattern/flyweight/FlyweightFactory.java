@@ -1,26 +1,36 @@
 package com.echo.designpattern.flyweight;
 
+import com.google.common.collect.Maps;
+
 import java.util.HashMap;
+import java.util.Map;
 
-public class FlyweightFactory {
-	private HashMap<String, Flyweight> flyweights = new HashMap<String, Flyweight>();
-	private int visitCount;
+public class FlyweightFactory implements IFlyweightFactory {
 
-	public Flyweight getFlyweight(String objStr) {
-		Flyweight flyweight = flyweights.get(objStr);
-		visitCount++;
-		if (flyweight == null) {
-			flyweight = new Concretelyweight(objStr);
-			flyweights.put(objStr, flyweight);
-		}
-		return flyweight;
-	}
+  private Map<String, AbstractFlyweight> flyweights = new HashMap<String, AbstractFlyweight>();
+  private Map<String, Integer> visitCounts = Maps.newHashMap();
 
-	public int getFlyweightsSize() {
-		return flyweights.size();
-	}
+  @Override
+  public AbstractFlyweight getInstance(String key) {
+    if (!flyweights.containsKey(key)) {
+      visitCounts.put(key, 0);
+      flyweights.put(key, new Flyweight(key));
+    }
+    visitCounts.put(key, visitCounts.get(key) + 1);
+    return flyweights.get(key);
+  }
 
-	public int getVisitcount() {
-		return visitCount;
-	}
+  @Override
+  public int size() {
+    return flyweights.size();
+  }
+
+  @Override
+  public int visitCount(String key) {
+    if (!visitCounts.containsKey(key)) {
+      return 0;
+    }
+    return visitCounts.get(key);
+  }
+
 }

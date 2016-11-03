@@ -1,6 +1,14 @@
 package com.echo.designpattern.flyweight;
 
-public abstract class Flyweight {
-protected String name;
-protected abstract void operation();
+public class Flyweight extends AbstractFlyweight {
+
+  public Flyweight(String name) {
+    super.name = name;
+  }
+
+  @Override
+  public void doOperate() {
+    System.out.println("Flyweight : " + name + " @" + this);
+  }
+
 }
