@@ -2,10 +2,10 @@ package com.echo.designpattern.proxy;
 
 public class Client {
 
-	public static void main(String[] args) {
-		Sourceable proxy = new Proxy();
-		proxy.method();
-		proxy.method();
-	}
+  public static void main(String[] args) {
+    IProxy proxy = new Proxy();
+    proxy.doSomething();
+    proxy.doSomething();
+  }
 
 }

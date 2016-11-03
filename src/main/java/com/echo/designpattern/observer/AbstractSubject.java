@@ -3,29 +3,26 @@ package com.echo.designpattern.observer;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class AbstractSubject implements Subject {
-	List<Observer> observers = new ArrayList<Observer>();
+public abstract class AbstractSubject implements ISubject {
 
-	@Override
-	public void add(Observer observer) {
-		observers.add(observer);
-	}
+  List<IObserver> observers = new ArrayList<IObserver>();
 
-	@Override
-	public void remove(Observer observer) {
-		observers.remove(observer);
-	}
+  @Override
+  public void attach(IObserver observer) {
+    observers.add(observer);
+  }
 
-	@Override
-	public void notifyObservers() {
-		for (Observer observer : observers) {
-			observer.update();
-		}
-	}
+  @Override
+  public void detach(IObserver observer) {
+    observers.remove(observer);
+  }
 
-	@Override
-	public void operation() {
-		notifyObservers();
-	}
+  @Override
+  public void notifyObservers(String state) {
+    System.out.println("Subject state: " + state);
+    for (IObserver observer : observers) {
+      observer.update(state);
+    }
+  }
 
 }

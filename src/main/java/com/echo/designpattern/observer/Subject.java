@@ -1,11 +1,12 @@
 package com.echo.designpattern.observer;
 
-public interface Subject {
-	public void add(Observer observer);
+public class Subject extends AbstractSubject {
 
-	public void remove(Observer observer);
+  private String state;
 
-	public void notifyObservers();
+  public void doChage(String state) {
+    this.state = state;
+    notifyObservers(state);
+  }
 
-	public void operation();
 }
