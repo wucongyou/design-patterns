@@ -4,7 +4,7 @@ public class Client {
 
   public static void main(String[] args) {
     ICalculateStrategy[] calculateStrategies = {new Addition(),
-        new Substraction(),
+        new Subtraction(),
         new Multiplication(),
         new Division()};
     ICalculator calculator = new Calculator();

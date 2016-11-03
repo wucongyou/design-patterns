@@ -18,7 +18,24 @@
             </plugin>
         </plugins>
     </build>
+    <properties>
+        <lombok.version>1.12.6</lombok.version>
+        <guava.version>18.0</guava.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <dependencies>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
         <dependency>
             <!-- junit -->
             <groupId>junit</groupId>
