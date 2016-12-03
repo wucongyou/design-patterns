@@ -7,6 +7,11 @@ package com.echo.algorithm.sort;
 public class SelectionSort implements ISort {
 
   @Override
+  public String getName() {
+    return "selection";
+  }
+
+  @Override
   public void doSort(int[] records) {
     for (int i = 0; i < records.length - 1; i++) {
       int minIndex = i;

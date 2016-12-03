@@ -10,12 +10,12 @@ public class Builder implements IBuilder {
   }
 
   @Override
-  public void buildCpu() {
+  public void buildCPU() {
     computer.setCpu("i7-4700mq");
   }
 
   @Override
-  public void buildGpu() {
+  public void buildGPU() {
     computer.setGpu("Nvidia GTX990");
   }
 

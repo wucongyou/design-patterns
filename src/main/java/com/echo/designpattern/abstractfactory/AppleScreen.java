@@ -5,9 +5,9 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class SamsungScreen implements IScreen {
+public class AppleScreen implements IScreen {
 
-  private static final String COMPANY_NAME = "Samsung";
+  private static final String COMPANY_NAME = "Apple";
   private static final String PRODUCT_CATEGORY = "Screen";
   private String name;
 

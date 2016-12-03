@@ -6,6 +6,8 @@ package com.echo.algorithm.sort;
  */
 public interface ISort {
 
+  String getName();
+
   void doSort(int[] records);
 
 }

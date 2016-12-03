@@ -9,6 +9,11 @@ import com.echo.algorithm.helper.ArrayHelper;
 public class BubbleSort implements ISort {
 
   @Override
+  public String getName() {
+    return "bubble";
+  }
+
+  @Override
   public void doSort(int[] records) {
     int len = records.length;
     for (int i = 0; i < len; i++) {

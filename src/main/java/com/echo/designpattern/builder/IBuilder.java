@@ -4,9 +4,9 @@ public interface IBuilder {
 
   void buildMainBoard();
 
-  void buildCpu();
+  void buildCPU();
 
-  void buildGpu();
+  void buildGPU();
 
   void buildMemory();
 

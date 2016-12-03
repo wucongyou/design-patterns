@@ -7,10 +7,14 @@ package com.echo.algorithm.sort;
 public class ShellSort implements ISort {
 
   @Override
+  public String getName() {
+    return "shell";
+  }
+
+  @Override
   public void doSort(int[] records) {
     int d = records.length / 2;
     while (d >= 1) {
-      System.out.println(d);
       for (int i = d; i < records.length; i += d) {
         if (records[i] < records[i - d]) {
           int tmp = records[i];

@@ -1,9 +1,13 @@
-package com.echo.designpattern.builder;
+package com.echo.designpattern.abstractfactory;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public class BuilderTest {
+/**
+ * @author echo
+ * @since 16-12-3
+ */
+public class AbstractFactoryTest {
 
   @Before
   public void setUp() throws Exception {

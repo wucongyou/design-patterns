@@ -2,8 +2,8 @@ package com.echo.designpattern.abstractfactory;
 
 public interface IFactory {
 
-  ICPU assembleCPU();
+  ICPU getCPU(String name);
 
-  IScreen assembleScreen();
+  IScreen getScreen(String name);
 
 }

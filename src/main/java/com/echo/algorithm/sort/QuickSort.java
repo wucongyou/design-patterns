@@ -7,6 +7,11 @@ package com.echo.algorithm.sort;
 public class QuickSort implements ISort {
 
   @Override
+  public String getName() {
+    return "quick";
+  }
+
+  @Override
   public void doSort(int[] records) {
     doSort(records, 0, records.length - 1);
   }
@@ -26,7 +31,7 @@ public class QuickSort implements ISort {
     while (i < j) {
       for (; i < j && records[j] >= pItem; j--) ;
       if (i < j) {
-        records[start] = records[j];
+        records[i] = records[j];
       }
       for (; i < j && records[i] <= pItem; i++) ;
       if (i < j) {

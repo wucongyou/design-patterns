@@ -10,8 +10,8 @@ public class Director {
 
   public void construct() {
     builder.buildMainBoard();
-    builder.buildCpu();
-    builder.buildGpu();
+    builder.buildCPU();
+    builder.buildGPU();
     builder.buildMemory();
     builder.buildDisk();
     builder.buildPower();

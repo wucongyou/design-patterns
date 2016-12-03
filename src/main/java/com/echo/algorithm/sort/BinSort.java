@@ -6,7 +6,12 @@ import com.echo.algorithm.helper.ArrayHelper;
  * @author echo
  * @since 16-11-2
  */
-public class BinSelectSort implements ISort {
+public class BinSort implements ISort {
+
+  @Override
+  public String getName() {
+    return "bin";
+  }
 
   @Override
   public void doSort(int[] records) {
