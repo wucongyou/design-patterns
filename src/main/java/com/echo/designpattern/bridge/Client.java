@@ -1,15 +1,18 @@
 package com.echo.designpattern.bridge;
 
+/**
+ * @author congyou.wu
+ * @since 2017-03-29 下午8:43
+ */
 public class Client {
 
     public static void main(String[] args) {
-        AbstractionA abstractionA = new AbstractionA(new ImplementorA());
-        abstractionA.operation();
-        abstractionA.anotherOperation();
+        Phone phone = new IPhone();
+        phone.setApp(new Memo());
+        phone.run();
 
-        RefinedAbstratcion refinedAbstratcion = new RefinedAbstratcion(new RefinedImplementor());
-        refinedAbstratcion.operation();
-        refinedAbstratcion.anotherOperation();
+        phone = new AndroidPhone();
+        phone.setApp(new YinYangMaster());
+        phone.run();
     }
-
 }
