@@ -10,5 +10,4 @@ public class Client {
         ThreeParse threeParse = new ChangeoverPlug(new TwoParseOutlet());
         threeParse.threeParseCharge();
     }
-
 }

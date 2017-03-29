@@ -7,5 +7,4 @@ package com.echo.designpattern.adapter;
 public interface TwoParse {
 
     void twoParseCharge();
-
 }

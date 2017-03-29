@@ -1,13 +1,12 @@
 package com.echo.designpattern.abstractfactory;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-
-@AllArgsConstructor
 public class AppleCPU implements ICPU {
 
-    @Getter
     private String name;
+
+    public AppleCPU(String name) {
+        this.name = name;
+    }
 
     @Override
     public void doCalculate() {

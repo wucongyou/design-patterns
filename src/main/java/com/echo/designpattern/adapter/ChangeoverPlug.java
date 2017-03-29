@@ -17,6 +17,5 @@ public class ChangeoverPlug implements ThreeParse {
         twoParse.twoParseCharge();
         System.out.println("now I can also charge for three-parse plug devices with the help of changeover plug");
     }
-
 }
 

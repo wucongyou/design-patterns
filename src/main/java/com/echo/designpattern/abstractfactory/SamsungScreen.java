@@ -1,13 +1,12 @@
 package com.echo.designpattern.abstractfactory;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-
-@AllArgsConstructor
 public class SamsungScreen implements IScreen {
 
-    @Getter
     private String name;
+
+    public SamsungScreen(String name) {
+        this.name = name;
+    }
 
     @Override
     public void doDisplay() {

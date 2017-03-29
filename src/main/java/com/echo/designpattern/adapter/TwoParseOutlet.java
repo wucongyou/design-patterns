@@ -9,5 +9,4 @@ public class TwoParseOutlet implements TwoParse {
     public void twoParseCharge() {
         System.out.println("I can charge for two-parse plug devices");
     }
-
 }
