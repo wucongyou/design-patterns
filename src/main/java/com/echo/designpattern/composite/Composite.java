@@ -4,31 +4,40 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Composite extends Component {
-    List<Component> list = new ArrayList<Component>();
 
-    @Override
-    protected void add(Component component) {
-        list.add(component);
+    private List<Component> children = new ArrayList<>();
+
+    public Composite(String name) {
+        super(name);
     }
 
     @Override
-    protected void remove(Component component) {
-        list.remove(component);
+    protected Component add(Component component) {
+        children.add(component);
+        return this;
+    }
+
+    @Override
+    protected Component remove(Component component) {
+        children.remove(component);
+        return this;
     }
 
     @Override
     protected void eachChild() {
-        eachChild(0);
+        eachChild(this, 0);
     }
 
-    protected void eachChild(int n) {
+    private void eachChild(Component component, int n) {
         for (int i = 0; i < n; i++) {
             System.out.print("-");
         }
-        System.out.println(name);
-        for (Component c : list) {
-            c.eachChild(n + 4);
+        System.out.println(component.getName());
+        if (component instanceof Leaf) {
+            return;
+        }
+        for (Component child : ((Composite) component).children) {
+            eachChild(child, n + 4);
         }
     }
-
 }
