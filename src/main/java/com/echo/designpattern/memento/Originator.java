@@ -10,17 +10,17 @@ import lombok.Data;
 @AllArgsConstructor
 public class Originator implements IMementoAware {
 
-  private String name;
-  private int value;
+    private String name;
+    private int value;
 
-  @Override
-  public Memento getMemento() {
-    return new Memento(value);
-  }
+    @Override
+    public Memento getMemento() {
+        return new Memento(value);
+    }
 
-  @Override
-  public void recovery(Memento memento) {
-    this.value = memento.getValue();
-  }
+    @Override
+    public void recovery(Memento memento) {
+        this.value = memento.getValue();
+    }
 
 }

@@ -6,9 +6,9 @@ package com.echo.designpattern.factorymethod;
  */
 public class Client {
 
-  public static void main(String[] args) {
-    ISender sender = SenderFactoryWithStaticMethod.produceSms();
-    sender.send("Hi, there!");
-  }
+    public static void main(String[] args) {
+        ISender sender = SenderFactoryWithStaticMethod.produceSms();
+        sender.send("Hi, there!");
+    }
 
 }

@@ -10,6 +10,6 @@ import lombok.Data;
 @AllArgsConstructor
 public class Caretaker {
 
-  private Memento memento;
+    private Memento memento;
 
 }

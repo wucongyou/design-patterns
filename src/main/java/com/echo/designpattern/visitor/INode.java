@@ -5,6 +5,6 @@ package com.echo.designpattern.visitor;
  */
 public interface INode {
 
-  void doAccept(IVisitor visitor);
+    void doAccept(IVisitor visitor);
 
 }

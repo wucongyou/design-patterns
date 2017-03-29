@@ -5,8 +5,8 @@ package com.echo.designpattern.state;
  */
 public interface IState {
 
-  void doChangeState(Context context);
+    void doChangeState(Context context);
 
-  String getName();
+    String getName();
 
 }

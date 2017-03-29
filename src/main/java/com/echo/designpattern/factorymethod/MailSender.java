@@ -5,9 +5,9 @@ package com.echo.designpattern.factorymethod;
  */
 public class MailSender implements ISender {
 
-  @Override
-  public void send(String message) {
-    System.out.println("Sent mail: " + message);
-  }
+    @Override
+    public void send(String message) {
+        System.out.println("Sent mail: " + message);
+    }
 
 }

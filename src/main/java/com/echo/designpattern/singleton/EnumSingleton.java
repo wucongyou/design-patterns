@@ -1,9 +1,9 @@
 package com.echo.designpattern.singleton;
 
 public enum EnumSingleton {
-  INSTANCE;
+    INSTANCE;
 
-  public void doSomeThing() {
-  }
-  
+    public void doSomeThing() {
+    }
+
 }

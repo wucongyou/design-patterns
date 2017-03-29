@@ -7,9 +7,9 @@ import java.math.BigDecimal;
  */
 public class Division implements ICalculateStrategy {
 
-  @Override
-  public BigDecimal doCalculate(BigDecimal a, BigDecimal b) {
-    return a.divide(b);
-  }
+    @Override
+    public BigDecimal doCalculate(BigDecimal a, BigDecimal b) {
+        return a.divide(b);
+    }
 
 }

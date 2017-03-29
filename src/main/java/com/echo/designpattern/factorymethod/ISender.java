@@ -5,6 +5,6 @@ package com.echo.designpattern.factorymethod;
  */
 public interface ISender {
 
-  void send(String message);
+    void send(String message);
 
 }

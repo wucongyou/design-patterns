@@ -7,9 +7,9 @@ import java.math.BigDecimal;
  */
 public class Subtraction implements ICalculateStrategy {
 
-  @Override
-  public BigDecimal doCalculate(BigDecimal a, BigDecimal b) {
-    return a.subtract(b);
-  }
+    @Override
+    public BigDecimal doCalculate(BigDecimal a, BigDecimal b) {
+        return a.subtract(b);
+    }
 
 }

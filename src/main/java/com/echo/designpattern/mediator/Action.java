@@ -7,7 +7,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class Action {
 
-  private String title;
-  private String desc;
+    private String title;
+    private String desc;
 
 }

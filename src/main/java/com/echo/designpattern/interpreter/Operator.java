@@ -6,24 +6,24 @@ package com.echo.designpattern.interpreter;
  */
 public enum Operator {
 
-  ADDITION("+"),
-  SUBTRACTION("-"),
-  MULTIPLICATION("*"),
-  DIVISION("/");
+    ADDITION("+"),
+    SUBTRACTION("-"),
+    MULTIPLICATION("*"),
+    DIVISION("/");
 
-  private String value;
+    private String value;
 
-  Operator(String value) {
-    this.value = value;
-  }
-
-  public static Operator of(String s) {
-    for (Operator operator : Operator.values()) {
-      if (operator.value.equals(s)) {
-        return operator;
-      }
+    Operator(String value) {
+        this.value = value;
     }
-    return null;
-  }
+
+    public static Operator of(String s) {
+        for (Operator operator : Operator.values()) {
+            if (operator.value.equals(s)) {
+                return operator;
+            }
+        }
+        return null;
+    }
 
 }

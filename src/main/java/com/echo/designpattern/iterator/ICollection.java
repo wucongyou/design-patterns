@@ -7,12 +7,12 @@ import java.util.List;
  */
 public interface ICollection {
 
-  IIterator iterator();
+    IIterator iterator();
 
-  List<Object> getItems();
+    List<Object> getItems();
 
-  Object get(int index);
+    Object get(int index);
 
-  int size();
+    int size();
 
 }

@@ -2,8 +2,8 @@ package com.echo.designpattern.iterator;
 
 public interface IIterator {
 
-  Object next();
+    Object next();
 
-  boolean hasNext();
+    boolean hasNext();
 
 }

@@ -7,31 +7,31 @@ import java.math.BigDecimal;
  */
 public class Calculator implements ICalculator {
 
-  private BigDecimal ope1;
-  private BigDecimal ope2;
-  private ICalculateStrategy calculateStrategy;
+    private BigDecimal ope1;
+    private BigDecimal ope2;
+    private ICalculateStrategy calculateStrategy;
 
-  public Calculator() {
-  }
+    public Calculator() {
+    }
 
-  public Calculator(ICalculateStrategy calculateStrategy) {
-    this.calculateStrategy = calculateStrategy;
-  }
+    public Calculator(ICalculateStrategy calculateStrategy) {
+        this.calculateStrategy = calculateStrategy;
+    }
 
-  @Override
-  public void setCalculateStrategy(ICalculateStrategy calculateStrategy) {
-    this.calculateStrategy = calculateStrategy;
-  }
+    @Override
+    public void setCalculateStrategy(ICalculateStrategy calculateStrategy) {
+        this.calculateStrategy = calculateStrategy;
+    }
 
-  @Override
-  public String getPrettyOutput() {
-    return calculateStrategy.doCalculate(ope1, ope2).toString();
-  }
+    @Override
+    public String getPrettyOutput() {
+        return calculateStrategy.doCalculate(ope1, ope2).toString();
+    }
 
-  @Override
-  public void doInput(String ope1, String ope2) {
-    this.ope1 = new BigDecimal(ope1);
-    this.ope2 = new BigDecimal(ope2);
-  }
+    @Override
+    public void doInput(String ope1, String ope2) {
+        this.ope1 = new BigDecimal(ope1);
+        this.ope2 = new BigDecimal(ope2);
+    }
 
 }

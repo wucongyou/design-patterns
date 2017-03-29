@@ -2,13 +2,13 @@ package com.echo.designpattern.singleton;
 
 public class HungrySingleton {
 
-  private static HungrySingleton singleton = new HungrySingleton();
+    private static HungrySingleton singleton = new HungrySingleton();
 
-  private HungrySingleton() {
-  }
+    private HungrySingleton() {
+    }
 
-  public static HungrySingleton getInstance() {
-    return singleton;
-  }
+    public static HungrySingleton getInstance() {
+        return singleton;
+    }
 
 }

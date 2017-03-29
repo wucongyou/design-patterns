@@ -9,17 +9,17 @@ import java.util.List;
  */
 public class NodeCollection implements INode {
 
-  private List<INode> nodes;
+    private List<INode> nodes;
 
-  public NodeCollection() {
-    nodes = Arrays.asList(new NodeA(), new NodeB());
-  }
-
-  @Override
-  public void doAccept(IVisitor visitor) {
-    for (INode node : nodes) {
-      node.doAccept(visitor);
+    public NodeCollection() {
+        nodes = Arrays.asList(new NodeA(), new NodeB());
     }
-  }
+
+    @Override
+    public void doAccept(IVisitor visitor) {
+        for (INode node : nodes) {
+            node.doAccept(visitor);
+        }
+    }
 
 }

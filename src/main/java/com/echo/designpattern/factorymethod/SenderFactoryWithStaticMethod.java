@@ -5,12 +5,12 @@ package com.echo.designpattern.factorymethod;
  */
 public class SenderFactoryWithStaticMethod {
 
-  public static ISender produceMail() {
-    return new MailSender();
-  }
+    public static ISender produceMail() {
+        return new MailSender();
+    }
 
-  public static ISender produceSms() {
-    return new SMSSender();
-  }
+    public static ISender produceSms() {
+        return new SMSSender();
+    }
 
 }

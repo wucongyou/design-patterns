@@ -7,11 +7,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Computer {
 
-  private String mainBoard;
-  private String cpu;
-  private String gpu;
-  private String memory;
-  private String disk;
-  private String power;
+    private String mainBoard;
+    private String cpu;
+    private String gpu;
+    private String memory;
+    private String disk;
+    private String power;
 
 }

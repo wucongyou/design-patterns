@@ -5,8 +5,8 @@ package com.echo.designpattern.visitor;
  */
 public interface IVisitor {
 
-  void visit(NodeA concreteNodeA);
+    void visit(NodeA concreteNodeA);
 
-  void visit(NodeB concreteNodeB);
+    void visit(NodeB concreteNodeB);
 
 }

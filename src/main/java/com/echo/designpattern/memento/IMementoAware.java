@@ -6,8 +6,8 @@ package com.echo.designpattern.memento;
  */
 public interface IMementoAware {
 
-  Memento getMemento();
+    Memento getMemento();
 
-  void recovery(Memento memento);
+    void recovery(Memento memento);
 
 }

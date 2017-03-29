@@ -4,6 +4,6 @@ import java.math.BigDecimal;
 
 public interface ICalculateStrategy {
 
-  BigDecimal doCalculate(BigDecimal a, BigDecimal b);
+    BigDecimal doCalculate(BigDecimal a, BigDecimal b);
 
 }

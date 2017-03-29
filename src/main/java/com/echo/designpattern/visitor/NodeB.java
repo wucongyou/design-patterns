@@ -5,9 +5,9 @@ package com.echo.designpattern.visitor;
  */
 public class NodeB implements INode {
 
-  @Override
-  public void doAccept(IVisitor visitor) {
-    visitor.visit(this);
-  }
+    @Override
+    public void doAccept(IVisitor visitor) {
+        visitor.visit(this);
+    }
 
 }

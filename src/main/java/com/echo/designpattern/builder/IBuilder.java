@@ -2,18 +2,18 @@ package com.echo.designpattern.builder;
 
 public interface IBuilder {
 
-  void buildMainBoard();
+    void buildMainBoard();
 
-  void buildCPU();
+    void buildCPU();
 
-  void buildGPU();
+    void buildGPU();
 
-  void buildMemory();
+    void buildMemory();
 
-  void buildDisk();
+    void buildDisk();
 
-  void buildPower();
+    void buildPower();
 
-  Computer retrieveResult();
+    Computer retrieveResult();
 
 }

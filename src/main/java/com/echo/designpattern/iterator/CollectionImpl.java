@@ -5,38 +5,38 @@ import java.util.List;
 
 public class CollectionImpl implements ICollection {
 
-  List<Object> items;
+    List<Object> items;
 
-  public CollectionImpl() {
-    items = new ArrayList<>();
-  }
+    public CollectionImpl() {
+        items = new ArrayList<>();
+    }
 
-  public CollectionImpl(List<Object> items) {
-    List<Object> list = new ArrayList<>();
-    list.addAll(items);
-    this.items = list;
-  }
+    public CollectionImpl(List<Object> items) {
+        List<Object> list = new ArrayList<>();
+        list.addAll(items);
+        this.items = list;
+    }
 
-  @Override
-  public IIterator iterator() {
-    return new IteratorImpl(this);
-  }
+    @Override
+    public IIterator iterator() {
+        return new IteratorImpl(this);
+    }
 
-  @Override
-  public List<Object> getItems() {
-    List<Object> list = new ArrayList<>();
-    list.addAll(items);
-    return list;
-  }
+    @Override
+    public List<Object> getItems() {
+        List<Object> list = new ArrayList<>();
+        list.addAll(items);
+        return list;
+    }
 
-  @Override
-  public int size() {
-    return items.size();
-  }
+    @Override
+    public int size() {
+        return items.size();
+    }
 
-  @Override
-  public Object get(int index) {
-    return items.get(index);
-  }
+    @Override
+    public Object get(int index) {
+        return items.get(index);
+    }
 
 }

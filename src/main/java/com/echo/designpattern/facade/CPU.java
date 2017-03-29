@@ -2,12 +2,12 @@ package com.echo.designpattern.facade;
 
 public class CPU {
 
-  public void startup() {
-    System.out.println("CPU is starting up");
-  }
+    public void startup() {
+        System.out.println("CPU is starting up");
+    }
 
-  public void shutdown() {
-    System.out.println("CPU shutting down");
-  }
+    public void shutdown() {
+        System.out.println("CPU shutting down");
+    }
 
 }

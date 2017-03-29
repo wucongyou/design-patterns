@@ -7,7 +7,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class Context {
 
-  private int ope1;
-  private int ope2;
+    private int ope1;
+    private int ope2;
 
 }

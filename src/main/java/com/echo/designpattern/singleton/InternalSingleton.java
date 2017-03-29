@@ -6,20 +6,20 @@ package com.echo.designpattern.singleton;
  */
 public class InternalSingleton {
 
-  private static class SingletonClassInstance {
-    private static final InternalSingleton instance = new InternalSingleton();
-  }
+    private InternalSingleton() {
+    }
 
-  private InternalSingleton() {
-  }
+    public static InternalSingleton getInstance() {
+        return SingletonClassInstance.instance;
+    }
 
-  public static InternalSingleton getInstance() {
-    return SingletonClassInstance.instance;
-  }
+    /* 如果该对象被用于序列化，可以保证对象在序列化前后保持一致 */
+    private Object readResolve() {
+        return SingletonClassInstance.instance;
+    }
 
-  /* 如果该对象被用于序列化，可以保证对象在序列化前后保持一致 */
-  private Object readResolve() {
-    return SingletonClassInstance.instance;
-  }
+    private static class SingletonClassInstance {
+        private static final InternalSingleton instance = new InternalSingleton();
+    }
 
 }

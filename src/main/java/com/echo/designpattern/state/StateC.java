@@ -5,16 +5,16 @@ package com.echo.designpattern.state;
  */
 public class StateC implements IState {
 
-  private String name = "C";
+    private String name = "C";
 
-  @Override
-  public void doChangeState(Context context) {
-    context.setState(new StateA());
-  }
+    @Override
+    public void doChangeState(Context context) {
+        context.setState(new StateA());
+    }
 
-  @Override
-  public String getName() {
-    return name;
-  }
+    @Override
+    public String getName() {
+        return name;
+    }
 
 }

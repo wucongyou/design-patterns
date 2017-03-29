@@ -6,10 +6,10 @@ package com.echo.designpattern.strategy;
  */
 public interface ICalculator {
 
-  void setCalculateStrategy(ICalculateStrategy calculateStrategy);
+    void setCalculateStrategy(ICalculateStrategy calculateStrategy);
 
-  String getPrettyOutput();
+    String getPrettyOutput();
 
-  void doInput(String ope1, String ope2);
+    void doInput(String ope1, String ope2);
 
 }

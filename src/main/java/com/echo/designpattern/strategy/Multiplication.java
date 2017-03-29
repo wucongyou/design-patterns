@@ -7,8 +7,8 @@ import java.math.BigDecimal;
  */
 public class Multiplication implements ICalculateStrategy {
 
-  @Override
-  public BigDecimal doCalculate(BigDecimal a, BigDecimal b) {
-    return a.multiply(b);
-  }
+    @Override
+    public BigDecimal doCalculate(BigDecimal a, BigDecimal b) {
+        return a.multiply(b);
+    }
 }

@@ -6,10 +6,10 @@ package com.echo.designpattern.flyweight;
  */
 public interface IFlyweightFactory {
 
-  AbstractFlyweight getInstance(String key);
+    AbstractFlyweight getInstance(String key);
 
-  int size();
+    int size();
 
-  int visitCount(String key);
+    int visitCount(String key);
 
 }
