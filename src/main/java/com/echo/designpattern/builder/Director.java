@@ -2,19 +2,14 @@ package com.echo.designpattern.builder;
 
 public class Director {
 
-    private IBuilder builder;
+    private Builder builder;
 
-    public Director(IBuilder builder) {
+    public Director(Builder builder) {
         this.builder = builder;
     }
 
-    public void construct() {
-        builder.buildMainBoard();
-        builder.buildCPU();
-        builder.buildGPU();
-        builder.buildMemory();
-        builder.buildDisk();
-        builder.buildPower();
+    public Builder conduct() {
+        return builder.mainBoard().cpu().gpu().memory().disk().power();
     }
 
 }
