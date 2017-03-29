@@ -1,14 +1,15 @@
 package com.echo.designpattern.command;
 
 public class Invoker {
-    private ICommand command;
 
-    public Invoker(ICommand command) {
+    private Command command;
+
+    public Invoker(Command command) {
         this.command = command;
     }
 
-    public void runCommand() {
-        System.out.println("Invoker calls ICommand's execute.");
+    public void invoke() {
+        System.out.print("invoker invoke -> ");
         command.execute();
     }
 }
