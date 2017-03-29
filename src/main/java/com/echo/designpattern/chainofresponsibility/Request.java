@@ -1,31 +1,61 @@
 package com.echo.designpattern.chainofresponsibility;
 
 /**
- * 抽象请求
+ * @author congyou.wu
+ * @since 2017-03-29 下午10:16
  */
-public abstract class Request {
+public class Request {
 
-    protected String content;
+    private Level level;
+    private String content;
 
-    public Request(String content) {
+    public Request(Level level, String content) {
+        this.level = level;
         this.content = content;
-    }
-
-    /**
-     * 获取请求等级
-     */
-    protected abstract int getRequestLevel();
-
-    /**
-     * 获取请求内容
-     */
-    public String getRequestContent() {
-        return content;
     }
 
     @Override
     public String toString() {
-        return "Request [content = " + content + "]";
+        return "Request{" +
+            "level=" + level +
+            ", content='" + content + '\'' +
+            '}';
     }
 
+    public Level getLevel() {
+        return level;
+    }
+
+    public void setLevel(Level level) {
+        this.level = level;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public enum Level {
+        LOW(1, "low"),
+        MIDDLE(2, "middle"),
+        HIGH(3, "high"),;
+        int value;
+        String desc;
+
+        Level(int value, String desc) {
+            this.value = value;
+            this.desc = desc;
+        }
+
+        @Override
+        public String toString() {
+            return "Level{" +
+                "value=" + value +
+                ", desc='" + desc + '\'' +
+                '}';
+        }
+    }
 }
