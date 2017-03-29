@@ -1,11 +1,14 @@
 package com.echo.designpattern.adapter;
 
+/**
+ * @author congyou.wu
+ * @since 2017-03-29 下午8:17
+ */
 public class Client {
 
     public static void main(String[] args) {
-        IAdapter adapter = new Adapter(new Adaptee());
-        adapter.method1();
-        adapter.method2Adapted();
+        ThreeParse threeParse = new ChangeoverPlug(new TwoParseOutlet());
+        threeParse.threeParseCharge();
     }
 
 }
