@@ -11,5 +11,4 @@ public class Director {
     public Builder conduct() {
         return builder.mainBoard().cpu().gpu().memory().disk().power();
     }
-
 }
