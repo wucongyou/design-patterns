@@ -1,29 +1,23 @@
 package com.echo.designpattern.iterator;
 
-import java.util.ArrayList;
-import java.util.List;
+/**
+ * @author congyou.wu
+ * @since 2017-03-30 下午12:52
+ */
 
 public class Client {
 
     public static void main(String[] args) {
-        List<Object> list = new ArrayList<>();
-        list.add("Hello");
-        list.add("Mary");
-        ICollection collection = new CollectionImpl(list);
-        IIterator iter = collection.iterator();
+        com.echo.designpattern.iterator.Collect<String> c = new CollectImpl<>();
+        c.add("pen", "pie", "apple", "pen");
+        System.out.println(c.all());
+        Iter<String> iter = c.iter();
         while (iter.hasNext()) {
-            String item = (String) iter.next();
-            System.out.println(item);
+            System.out.println(iter.next());
         }
-
-        System.out.println("Current item : " + iter.next());
-
+        System.out.println(iter.next());
         while (iter.hasNext()) {
-            String item = (String) iter.next();
-            System.out.println(item);
+            System.out.println(iter.next());
         }
-
-
     }
-
 }
