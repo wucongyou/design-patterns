@@ -10,7 +10,7 @@ import com.google.common.collect.Lists;
  * @author congyou.wu
  * @since 2017-03-30 下午12:50
  */
-public class CollectImpl<T> implements com.echo.designpattern.iterator.Collect<T> {
+public class ListImpl<T> implements Collect<T> {
 
     private List<T> items = Lists.newArrayList();
 
