@@ -8,7 +8,7 @@ package com.echo.designpattern.iterator;
 public class Client {
 
     public static void main(String[] args) {
-        com.echo.designpattern.iterator.Collect<String> c = new CollectImpl<>();
+        Collect<String> c = new CollectImpl<>();
         c.add("pen", "pie", "apple", "pen");
         System.out.println(c.all());
         Iter<String> iter = c.iter();
