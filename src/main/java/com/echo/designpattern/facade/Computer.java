@@ -1,34 +1,34 @@
 package com.echo.designpattern.facade;
 
+/**
+ * @author congyou.wu
+ * @since 2017-03-30 下午11:09
+ */
 public class Computer {
 
-    private CPU cpu;
-    private Memory memory;
-    private Disk disk;
+    private CPU cpu = new CPU();
+    private Memory memory = new Memory();
+    private Disk disk = new Disk();
 
-    public Computer() {
-        cpu = new CPU();
-        memory = new Memory();
-        disk = new Disk();
+    public Computer run() {
+        System.out.println("run");
+        return this;
     }
 
-    public void startup() {
-        System.out.println("Computer is starting up");
+    public Computer startup() {
+        System.out.print("startup: ");
         cpu.startup();
         memory.startup();
         disk.startup();
-        System.out.println("Computer has completely started up.");
-    }
-
-    public void execute() {
-        System.out.println("Computer is running");
+        System.out.println("ok");
+        return this;
     }
 
     public void shutdown() {
+        System.out.print("shutdown: ");
         disk.shutdown();
         memory.shutdown();
-        disk.shutdown();
-        System.out.println("Computer has completely shutdown.");
+        cpu.shutdown();
+        System.out.println("ok");
     }
-
 }

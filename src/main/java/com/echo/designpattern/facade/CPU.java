@@ -1,13 +1,12 @@
 package com.echo.designpattern.facade;
 
-public class CPU {
+/**
+ * @author congyou.wu
+ * @since 2017-03-30 下午11:07
+ */
+public class CPU extends AbstractComponent {
 
-    public void startup() {
-        System.out.println("CPU is starting up");
+    public CPU() {
+        name = "CPU";
     }
-
-    public void shutdown() {
-        System.out.println("CPU shutting down");
-    }
-
 }

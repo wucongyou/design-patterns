@@ -10,7 +10,7 @@ public class ConcreteCommand implements Command {
 
     @Override
     public void execute() {
-        System.out.print("concrete command execute -> ");
+        System.out.print("concrete command run -> ");
         receiver.act();
     }
 

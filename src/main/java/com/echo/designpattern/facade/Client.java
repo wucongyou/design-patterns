@@ -1,12 +1,12 @@
 package com.echo.designpattern.facade;
 
+/**
+ * @author congyou.wu
+ * @since 2017-03-30 下午11:09
+ */
 public class Client {
 
     public static void main(String[] args) {
-        Computer computer = new Computer();
-        computer.startup();
-        computer.execute();
-        computer.shutdown();
+        new Computer().startup().run().shutdown();
     }
-
 }

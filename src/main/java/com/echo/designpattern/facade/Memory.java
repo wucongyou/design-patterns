@@ -1,13 +1,12 @@
 package com.echo.designpattern.facade;
 
-public class Memory {
+/**
+ * @author congyou.wu
+ * @since 2017-03-30 下午11:08
+ */
+public class Memory extends AbstractComponent {
 
-    public void startup() {
-        System.out.println("Memory is starting up");
+    public Memory() {
+        name = "memory";
     }
-
-    public void shutdown() {
-        System.out.println("Memory shutting down");
-    }
-
 }

@@ -1,13 +1,12 @@
 package com.echo.designpattern.facade;
 
-public class Disk {
+/**
+ * @author congyou.wu
+ * @since 2017-03-30 下午11:08
+ */
+public class Disk extends AbstractComponent {
 
-    public void startup() {
-        System.out.println("Disk is starting up");
+    public Disk() {
+        name = "disk";
     }
-
-    public void shutdown() {
-        System.out.println("Disk shutting down");
-    }
-
 }
