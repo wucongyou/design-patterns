@@ -1,14 +1,12 @@
 package com.echo.designpattern.state;
 
+/**
+ * @author congyou.wu
+ * @since 2017-03-30 上午11:40
+ */
 public class Client {
 
     public static void main(String[] args) {
-        Context context = new Context(new StateA());
-        context.doOperate();
-        context.doOperate();
-        context.doOperate();
-        context.doOperate();
-        context.doOperate();
+        new Person().change().change().change().change().change();
     }
-
 }
