@@ -1,18 +1,15 @@
 package com.echo.designpattern.strategy;
 
+/**
+ * @author congyou.wu
+ * @since 2017-03-30 上午11:19
+ */
 public class Client {
 
     public static void main(String[] args) {
-        ICalculateStrategy[] calculateStrategies = {new Addition(),
-            new Subtraction(),
-            new Multiplication(),
-            new Division()};
-        ICalculator calculator = new Calculator();
-        for (ICalculateStrategy calculateStrategy : calculateStrategies) {
-            calculator.setCalculateStrategy(calculateStrategy);
-            calculator.doInput("3", "5");
-            System.out.println(calculator.getPrettyOutput());
-        }
+        ShoppingCart cart = new ShoppingCart();
+        cart.add(new Inventory(1, "milk", 990L))
+            .add(new Inventory(2, "fruit", 2000L))
+            .pay(new Alipay());
     }
-
 }
