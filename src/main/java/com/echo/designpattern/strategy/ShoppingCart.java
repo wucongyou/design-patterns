@@ -5,10 +5,10 @@ import java.util.List;
 import com.google.common.collect.Lists;
 
 /**
+ * Context.
+ *
  * @author congyou.wu
  * @since 2017-03-30 上午11:14
- *
- * Context.
  */
 public class ShoppingCart {
 

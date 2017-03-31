@@ -1,10 +1,10 @@
 package com.echo.designpattern.singleton;
 
 /**
+ * NOTE: This implementation can only work correctly since JDK 1.5.
+ *
  * @author congyou.wu
  * @since 2017-03-30 上午10:23
- *
- * NOTE: This implementation can only work correctly since JDK 1.5.
  */
 public class DCLImpl {
 
