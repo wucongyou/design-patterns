@@ -16,8 +16,8 @@ public class Context {
         return varMap.get(name);
     }
 
-    public Context put(Var v) {
-        varMap.put(v.getName(), v);
+    public Context allocate(String name,int value) {
+        varMap.put(name, new Var(name,value));
         return this;
     }
 

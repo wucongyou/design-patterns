@@ -9,8 +9,9 @@ public class Var extends AbstractExpression {
     private String name;
     private int value;
 
-    public Var(String name) {
+    public Var(String name, int value) {
         this.name = name;
+        this.value = value;
     }
 
     @Override
