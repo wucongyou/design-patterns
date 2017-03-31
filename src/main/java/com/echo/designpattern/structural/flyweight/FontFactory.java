@@ -19,7 +19,7 @@ public class FontFactory {
         .build();
     /**
      * NOTE We do not use ConcurrentHashMap here
-     * because we do not need update this map currently and more importantly,
+     * because we do not need update this map concurrently and more importantly,
      * because the ConcurrentHashMap is weak-consistent.
      */
     private Map<Rendered, AbstractFont> map = Maps.newHashMap();
