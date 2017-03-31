@@ -13,7 +13,7 @@ public class Client {
         int tc = 10;
         ExecutorService exec = Executors.newFixedThreadPool(10);
         for (int i = 0; i < tc; i++) {
-            exec.execute(() -> System.out.println(DCLUnsafeImpl.instance()));
+            exec.execute(() -> System.out.println(DCLIncorrectImpl.instance()));
         }
         for (int i = 0; i < tc; i++) {
             exec.execute(() -> System.out.println(DCLImpl.instance()));
