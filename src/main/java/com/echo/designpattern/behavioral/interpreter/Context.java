@@ -1,13 +1,31 @@
 package com.echo.designpattern.behavioral.interpreter;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import java.util.Map;
 
-@Data
-@AllArgsConstructor
+import com.google.common.collect.Maps;
+
+/**
+ * @author congyou.wu
+ * @since 2017-03-31 下午12:48
+ */
 public class Context {
 
-    private int ope1;
-    private int ope2;
+    private Map<String, Var> varMap = Maps.newConcurrentMap();
 
+    public Var var(String name) {
+        return varMap.get(name);
+    }
+
+    public Context put(Var v) {
+        varMap.put(v.getName(), v);
+        return this;
+    }
+
+    public Context assign(String name, int value) {
+        if (!varMap.containsKey(name)) {
+            throw new IllegalArgumentException("var do not exist");
+        }
+        varMap.get(name).setValue(value);
+        return this;
+    }
 }
