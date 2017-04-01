@@ -11,8 +11,8 @@ public class Contact {
     private String phone;
     private String address;
 
-    public static ContactBuilder builder(String firstName, String lastName) {
-        return new ContactBuilder(firstName, lastName);
+    public static Builder builder(String firstName, String lastName) {
+        return new Builder(firstName, lastName);
     }
 
     @Override
@@ -57,23 +57,23 @@ public class Contact {
         this.address = address;
     }
 
-    public static class ContactBuilder {
+    public static class Builder {
         private String firstName;
         private String lastName;
         private String phone;
         private String address;
 
-        public ContactBuilder(String firstName, String lastName) {
+        public Builder(String firstName, String lastName) {
             this.firstName = firstName;
             this.lastName = lastName;
         }
 
-        public ContactBuilder phone(String phone) {
+        public Builder phone(String phone) {
             this.phone = phone;
             return this;
         }
 
-        public ContactBuilder address(String address) {
+        public Builder address(String address) {
             this.address = address;
             return this;
         }
