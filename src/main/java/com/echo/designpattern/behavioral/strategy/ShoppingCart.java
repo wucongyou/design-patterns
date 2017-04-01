@@ -1,5 +1,6 @@
 package com.echo.designpattern.behavioral.strategy;
 
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.common.collect.Lists;
@@ -16,9 +17,7 @@ public class ShoppingCart {
 
     public ShoppingCart add(Inventory inv, Inventory... is) {
         items.add(inv);
-        for (Inventory i : is) {
-            items.add(i);
-        }
+        items.addAll(Arrays.asList(is));
         return this;
     }
 

@@ -10,6 +10,6 @@ public class WechatPay implements Pay {
 
     @Override
     public void pay(long cent) {
-        System.out.print("wechat pay " + cent + "cent");
+        System.out.print("wechat pay " + cent + " cent");
     }
 }

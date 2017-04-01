@@ -7,9 +7,12 @@ package com.echo.designpattern.behavioral.strategy;
 public class Client {
 
     public static void main(String[] args) {
-        ShoppingCart cart = new ShoppingCart();
-        cart.add(new Inventory(1, "milk", 990L))
-            .add(new Inventory(2, "fruit", 2000L))
+        new ShoppingCart().add(new Inventory(1, "wahaha", 650L))
+            .add(new Inventory(2, "rio cock tail", 1300L))
             .pay(new Alipay());
+        System.out.println();
+        new ShoppingCart().add(new Inventory(3, "yakult", 1200L))
+            .add(new Inventory(2, "rio cock tail", 1300L))
+            .pay(new WechatPay());
     }
 }
