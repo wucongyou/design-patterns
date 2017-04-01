@@ -1,14 +1,14 @@
 package com.echo.designpattern.creational.abstractfactory;
 
-public class SamsungFactory implements IFactory {
+public class SamsungFactory implements Factory {
 
     @Override
-    public ICPU getCPU(String name) {
+    public CPU getCPU(String name) {
         return new SamsungCPU(name);
     }
 
     @Override
-    public IScreen getScreen(String name) {
+    public Screen getScreen(String name) {
         return new SamsungScreen(name);
     }
 

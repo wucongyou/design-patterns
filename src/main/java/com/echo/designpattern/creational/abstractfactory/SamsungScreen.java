@@ -1,6 +1,6 @@
 package com.echo.designpattern.creational.abstractfactory;
 
-public class SamsungScreen implements IScreen {
+public class SamsungScreen implements Screen {
 
     private String name;
 
@@ -9,7 +9,7 @@ public class SamsungScreen implements IScreen {
     }
 
     @Override
-    public void doDisplay() {
+    public void display() {
         System.out.println(String.format("%s:%s:%s",
             "Samsung", "Screen", name));
     }

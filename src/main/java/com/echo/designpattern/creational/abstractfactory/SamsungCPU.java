@@ -1,6 +1,6 @@
 package com.echo.designpattern.creational.abstractfactory;
 
-public class SamsungCPU implements ICPU {
+public class SamsungCPU implements CPU {
 
     private String name;
 
@@ -9,7 +9,7 @@ public class SamsungCPU implements ICPU {
     }
 
     @Override
-    public void doCalculate() {
+    public void calculate() {
         System.out.println(String.format("%s:%s:%s",
             "Samsung", "CPU", name));
     }

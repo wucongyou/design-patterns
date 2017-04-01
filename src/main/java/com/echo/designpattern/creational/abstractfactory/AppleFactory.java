@@ -1,14 +1,14 @@
 package com.echo.designpattern.creational.abstractfactory;
 
-public class AppleFactory implements IFactory {
+public class AppleFactory implements Factory {
 
     @Override
-    public ICPU getCPU(String name) {
+    public CPU getCPU(String name) {
         return new AppleCPU(name);
     }
 
     @Override
-    public IScreen getScreen(String name) {
+    public Screen getScreen(String name) {
         return new AppleScreen(name);
     }
 
