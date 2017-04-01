@@ -6,8 +6,7 @@ package com.echo.designpattern.structural.bridge;
  */
 public class YinYangMaster extends App {
 
-    @Override
-    void run() {
-        System.out.print("YinYangMaster");
+    public YinYangMaster() {
+        name = "YinYangMaster";
     }
 }

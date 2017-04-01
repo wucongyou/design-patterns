@@ -6,5 +6,9 @@ package com.echo.designpattern.structural.bridge;
  */
 public abstract class App {
 
-    abstract void run();
+    protected String name;
+
+    public void run() {
+        System.out.print(name);
+    }
 }

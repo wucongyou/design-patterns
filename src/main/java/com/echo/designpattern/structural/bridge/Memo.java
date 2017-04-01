@@ -6,8 +6,7 @@ package com.echo.designpattern.structural.bridge;
  */
 public class Memo extends App {
 
-    @Override
-    void run() {
-        System.out.print("memo");
+    public Memo() {
+        name = "memo";
     }
 }

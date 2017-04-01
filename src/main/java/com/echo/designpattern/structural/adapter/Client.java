@@ -7,7 +7,6 @@ package com.echo.designpattern.structural.adapter;
 public class Client {
 
     public static void main(String[] args) {
-        ThreeParse threeParse = new ChangeoverPlug(new TwoParseOutlet());
-        threeParse.threeParseCharge();
+        new ChangeoverPlug(new TwoParseOutlet()).threeParseCharge();
     }
 }

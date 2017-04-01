@@ -10,8 +10,11 @@ public class Client {
         Phone phone = new IPhone();
         phone.setApp(new Memo());
         phone.run();
-
-        phone = new AndroidPhone();
+        phone.setApp(new YinYangMaster());
+        phone.run();
+        phone = new GooglePixelPhone();
+        phone.setApp(new Memo());
+        phone.run();
         phone.setApp(new YinYangMaster());
         phone.run();
     }

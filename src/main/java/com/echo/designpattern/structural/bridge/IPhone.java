@@ -6,10 +6,7 @@ package com.echo.designpattern.structural.bridge;
  */
 public class IPhone extends Phone {
 
-    @Override
-    protected void run() {
-        System.out.print("iPhone is running ");
-        app.run();
-        System.out.println();
+    public IPhone() {
+        name = "iphone";
     }
 }
