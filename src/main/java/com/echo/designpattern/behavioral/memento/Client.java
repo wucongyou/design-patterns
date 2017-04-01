@@ -3,13 +3,12 @@ package com.echo.designpattern.behavioral.memento;
 public class Client {
 
     public static void main(String[] args) {
-        Originator originator = new Originator("Tom", 50);
-        Caretaker caretaker = new Caretaker(originator.getMemento());
-        System.out.println("Before : " + originator);
-        originator.setValue(20);
-        System.out.println("After : " + originator);
-        originator.recovery(caretaker.getMemento());
-        System.out.println("Recovery : " + originator);
+        Originator origin = new Originator("Tom", 50);
+        Caretaker ct = new Caretaker(origin.memento());
+        System.out.println("before " + origin);
+        origin.setValue(20);
+        System.out.println("after " + origin);
+        origin.recovery(ct.memento());
+        System.out.println("recovery " + origin);
     }
-
 }
