@@ -1,14 +1,14 @@
 package com.echo.designpattern.behavioral.observer;
 
+/**
+ * @author congyou.wu
+ * @since 2017-04-01 下午11:43
+ */
 public class Client {
 
     public static void main(String[] args) {
-        Subject subject = new Subject();
-        IObserver o1 = new ObserverA("Tom");
-        IObserver o2 = new ObserverB("Catherin");
-        subject.attach(o1);
-        subject.attach(o2);
-        subject.doChage("say hi");
+        new ConcreteSubject()
+            .attach(new ConcreteObserver("Tom"), new ConcreteObserver("Catherin"))
+            .change(new State("tomorrow will be rainy"));
     }
-
 }

@@ -1,28 +1,31 @@
 package com.echo.designpattern.behavioral.observer;
 
-import java.util.ArrayList;
-import java.util.List;
+/**
+ * @author congyou.wu
+ * @since 2017-04-01 下午11:42
+ */
+public abstract class AbstractSubject implements Subject {
 
-public abstract class AbstractSubject implements ISubject {
-
-    List<IObserver> observers = new ArrayList<IObserver>();
-
-    @Override
-    public void attach(IObserver observer) {
-        observers.add(observer);
-    }
+    protected State state;
+    protected String name;
 
     @Override
-    public void detach(IObserver observer) {
-        observers.remove(observer);
-    }
+    public abstract Subject attach(Observer observer, Observer... os);
 
     @Override
-    public void notifyObservers(String state) {
-        System.out.println("Subject state: " + state);
-        for (IObserver observer : observers) {
-            observer.update(state);
-        }
+    public abstract Subject detach(Observer observer);
+
+    @Override
+    public abstract void notifyObservers(State state);
+
+    @Override
+    public abstract void change(State state);
+
+    public String getName() {
+        return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 }
