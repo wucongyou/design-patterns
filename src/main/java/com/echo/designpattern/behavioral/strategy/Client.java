@@ -8,11 +8,11 @@ public class Client {
 
     public static void main(String[] args) {
         new ShoppingCart().add(new Inventory(1, "wahaha", 650L))
-            .add(new Inventory(2, "rio cock tail", 1300L))
+            .add(new Inventory(2, "rio cocktail", 1300L))
             .pay(new Alipay());
         System.out.println();
         new ShoppingCart().add(new Inventory(3, "yakult", 1200L))
-            .add(new Inventory(2, "rio cock tail", 1300L))
+            .add(new Inventory(2, "rio cocktail", 1300L))
             .pay(new WechatPay());
     }
 }
