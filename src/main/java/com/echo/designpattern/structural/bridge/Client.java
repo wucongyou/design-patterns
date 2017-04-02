@@ -7,15 +7,9 @@ package com.echo.designpattern.structural.bridge;
 public class Client {
 
     public static void main(String[] args) {
-        Phone phone = new IPhone();
-        phone.setApp(new Memo());
-        phone.run();
-        phone.setApp(new YinYangMaster());
-        phone.run();
-        phone = new GooglePixelPhone();
-        phone.setApp(new Memo());
-        phone.run();
-        phone.setApp(new YinYangMaster());
-        phone.run();
+        new IPhone().launch(new Memo()).run();
+        new IPhone().launch(new YinYangMaster()).run();
+        new GooglePixelPhone().launch(new Memo()).run();
+        new GooglePixelPhone().launch(new YinYangMaster()).run();
     }
 }

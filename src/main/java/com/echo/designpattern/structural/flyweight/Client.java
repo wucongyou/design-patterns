@@ -15,8 +15,7 @@ public class Client {
         FontFactory factory = new FontFactory();
         for (int i = 0; i < tc; i++) {
             exec.execute(() -> {
-                AbstractFont font = factory.get(FontFactory.Rendered.HELVETICA);
-                new Character("hello", 17, "red", font).show();
+                new Character("hello", 17, "red", factory.get(FontFactory.Rendered.HELVETICA)).show();
             });
         }
         exec.shutdown();

@@ -16,6 +16,6 @@ public class Addition extends AbstractExpression {
 
     @Override
     public long interpret(Context c) {
-        return left.interpret(c)+right.interpret(c);
+        return left.interpret(c) + right.interpret(c);
     }
 }

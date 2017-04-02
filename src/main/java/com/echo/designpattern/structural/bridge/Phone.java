@@ -9,8 +9,9 @@ public abstract class Phone {
     protected String name;
     protected App app;
 
-    public void setApp(App app) {
+    public Phone launch(App app) {
         this.app = app;
+        return this;
     }
 
     protected void run() {
