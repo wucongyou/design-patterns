@@ -3,7 +3,8 @@ design-patterns
 Implementations of 23 design-patterns.
 
 ## Quick Start
-Just run Client.main() in pattern package.
+Just run Client.main() in each pattern package.
+
 ## Content
   - Creational patterns: factory method, abstract factory, singleton, builder, prototype
   
