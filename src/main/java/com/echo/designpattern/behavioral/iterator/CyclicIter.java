@@ -17,12 +17,11 @@ public class CyclicIter<T> implements Iter<T> {
     @Override
     public T next() {
         if (position < collect.size() - 1) {
-            ++position;
-            return collect.get(position);
-        } else {
-            position = -1;
-            return null;
+            return collect.get(++position);
         }
+        // reset to start position when reach end
+        position = -1;
+        return null;
     }
 
     @Override
