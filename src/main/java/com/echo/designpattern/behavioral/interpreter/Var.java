@@ -3,6 +3,8 @@ package com.echo.designpattern.behavioral.interpreter;
 /**
  * @author congyou.wu
  * @since 2017-03-31 下午12:36
+ *
+ * Terminal expression.
  */
 public class Var extends AbstractExpression {
 

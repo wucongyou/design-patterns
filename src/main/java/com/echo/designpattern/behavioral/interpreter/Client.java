@@ -8,11 +8,33 @@ public class Client {
 
     public static void main(String[] args) {
         Context ctx = new Context();
-        ctx.allocate("x", 7).allocate("y", 1).allocate("z", 3);
+
+        int xV = 7, yV = 1, zV = 3;
+
+        ctx.allocate("x", xV)
+            .allocate("y", yV)
+            .allocate("z", zV);
+
         Var x = ctx.var("x");
         Var y = ctx.var("y");
         Var z = ctx.var("z");
-        System.out.println(new Addition(x, y).interpret(ctx)); // x+y
-        System.out.println(new Multiplication(z, new Addition(x, y)).interpret(ctx)); // z*(x+y)
+
+        // x + y
+        long res = new Addition(x, y).interpret(ctx);
+        if (res != (xV + yV)) {
+            throw new RuntimeException("res is incorrect");
+        }
+
+        // (x + y) * z
+        res = new Multiplication(new Addition(x, y), z).interpret(ctx);
+        if (res != (xV + yV) * zV) {
+            throw new RuntimeException("res is incorrect");
+        }
+
+        // assign 2 to z
+        ctx.assign("z", 2);
+        if (z.interpret(ctx) != 2) {
+            throw new RuntimeException("failed to assign var");
+        }
     }
 }
