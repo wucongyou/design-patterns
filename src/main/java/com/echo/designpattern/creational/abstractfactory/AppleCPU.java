@@ -1,5 +1,8 @@
 package com.echo.designpattern.creational.abstractfactory;
 
+/**
+ * ConcreteProductA1.
+ */
 public class AppleCPU implements CPU {
 
     private String name;

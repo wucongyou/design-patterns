@@ -1,5 +1,8 @@
 package com.echo.designpattern.creational.abstractfactory;
 
+/**
+ * ConcreteFactory2.
+ */
 public class SamsungFactory implements Factory {
 
     @Override

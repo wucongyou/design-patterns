@@ -1,5 +1,8 @@
 package com.echo.designpattern.creational.abstractfactory;
 
+/**
+ * ConcreteProductB2.
+ */
 public class SamsungScreen implements Screen {
 
     private String name;

@@ -1,5 +1,8 @@
 package com.echo.designpattern.creational.abstractfactory;
 
+/**
+ * Client.
+ */
 public class Client {
 
     public static void main(String[] args) {
@@ -10,5 +13,4 @@ public class Client {
         factory.getCPU("A10").calculate();
         factory.getScreen("IPS").display();
     }
-
 }
