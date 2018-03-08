@@ -1,5 +1,8 @@
 package com.echo.designpattern.creational.abstractfactory;
 
+/**
+ * ConcreteProductB1.
+ */
 public class AppleScreen implements Screen {
 
     private String name;

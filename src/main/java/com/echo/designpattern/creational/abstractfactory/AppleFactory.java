@@ -1,5 +1,8 @@
 package com.echo.designpattern.creational.abstractfactory;
 
+/**
+ * ConcreteFactory1.
+ */
 public class AppleFactory implements Factory {
 
     @Override

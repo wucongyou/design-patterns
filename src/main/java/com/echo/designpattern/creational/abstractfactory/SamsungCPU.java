@@ -1,5 +1,8 @@
 package com.echo.designpattern.creational.abstractfactory;
 
+/**
+ * ConcreteProductA2.
+ */
 public class SamsungCPU implements CPU {
 
     private String name;
